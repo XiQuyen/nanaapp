@@ -1,0 +1,53 @@
+class NaSpeakingDataView(object):
+    function = []
+    part1 = [{"html":"/speaking/food",
+	          "img" :"https://media-cdn.tripadvisor.com/media/photo-s/03/9b/2e/01/punta-cana.jpg",
+			  "caption":"Food"},
+	         {"html":"/speaking/traveling",
+			  "img" :"https://static.tacdn.com/img2/vacationrentals/lander/popularGeos/Gatlinburg cabins.jpg",
+			  "caption":"Traveling"},
+			 {"html":"/speaking/work",
+			  "img" :"https://static.tacdn.com/img2/vacationrentals/lander/popularGeos/Key West vacation rentals.jpg",
+			  "caption":"Work"} ]
+    part2 = [{"html":"/speaking/happiness",
+	          "img" :"https://media-cdn.tripadvisor.com/media/photo-s/03/9b/2e/01/punta-cana.jpg",
+			  "caption":"Happiness"},
+	         {"html":"/reading",
+			  "img" :"https://static.tacdn.com/img2/vacationrentals/lander/popularGeos/Gatlinburg cabins.jpg",
+			  "caption":"Traveling"},
+			 {"html":"/listening",
+			  "img" :"https://static.tacdn.com/img2/vacationrentals/lander/popularGeos/Key West vacation rentals.jpg",
+			  "caption":"Work"} ]
+    part3 = [{"html":"/",
+	          "img" :"https://media-cdn.tripadvisor.com/media/photo-s/03/9b/2e/01/punta-cana.jpg",
+			  "caption":"Food"},
+	         {"html":"/reading",
+			  "img" :"https://static.tacdn.com/img2/vacationrentals/lander/popularGeos/Gatlinburg cabins.jpg",
+			  "caption":"Traveling"},
+			 {"html":"/listening",
+			  "img" :"https://static.tacdn.com/img2/vacationrentals/lander/popularGeos/Key West vacation rentals.jpg",
+			  "caption":"Work"} ]
+    university = [ {  "phrase":    ["friendly contact", "be through the same experience"],
+			          "sentence" : ["be a friendly contact","social activities like parties, clubs, sports", "some university facilities such as sport halls, library or medical services"],			     
+			          "img" :"https://static.tacdn.com/img2/vacationrentals/lander/popularGeos/Key West vacation rentals.jpg",},
+				   {  "phrase":    ["help me with academic problems", "tell me about academic systems","spend too much time studying on your own"],
+			          "sentence" : ["keep up to date with your work", " identify opportunities for growth", "work in fast-changing environments", "Keep Your Skills up to Date", "enormous place"],			     
+			          "img" :"https://static.tacdn.com/img2/vacationrentals/lander/popularGeos/Key West vacation rentals.jpg"}]
+    movies = [ {  "phrase":   ["do my best", "do my utmost"],
+			      "sentence" :["city of craft memory"],			     
+			      "img" :"https://static.tacdn.com/img2/vacationrentals/lander/popularGeos/Key West vacation rentals.jpg",}]
+    memories = [ {"phrase":  ["craft memory"],
+			      "sentence" :"city of craft memory",			     
+			      "img" :"https://static.tacdn.com/img2/vacationrentals/lander/popularGeos/Key West vacation rentals.jpg",}]
+    reading = [ {"phrase":"common need that we share",
+			      "sentence" :"personal natural of happiness",			     
+			      "img" :"https://static.tacdn.com/img2/vacationrentals/lander/popularGeos/Key West vacation rentals.jpg",},
+                {"phrase":"natural of happiness",
+			      "sentence" :"personal natural of happiness",			     
+			      "img" :"https://static.tacdn.com/img2/vacationrentals/lander/popularGeos/Key West vacation rentals.jpg",},
+                {"phrase":"give me a profound ínight",
+			      "sentence" :"city of craft memory",			     
+			      "img" :"https://static.tacdn.com/img2/vacationrentals/lander/popularGeos/Key West vacation rentals.jpg",},
+                {"phrase":"inspirational books",
+			      "sentence" :"city of craft memory",			     
+			      "img" :"https://static.tacdn.com/img2/vacationrentals/lander/popularGeos/Key West vacation rentals.jpg",}]

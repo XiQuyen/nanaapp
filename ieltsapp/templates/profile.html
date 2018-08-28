@@ -1,0 +1,29 @@
+<!-- howdy/templates/profile.html -->
+
+{% load staticfiles %}        
+ 
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Nana Profile!</title>
+		<link rel="stylesheet" type="text/css" href='{% static "/css/foundation.css" %}'>		
+    </head>
+    <body>
+        <h1>Nana's Profile</h1>		
+		<p style="color:#FF0000";>
+			We hope to bring you the most interesting way to learn English and I hope you all enjoy English as I do. 
+			<br>
+			
+		</p>
+		<form action="/post" method="get">
+			Name:<br> 	<input type="text" name="name" value="Dang Minh"><br>
+			Email or phone number:<br> <input type="text" name="email_or_phone" value="0909542310"><br><br>
+			Message: <br><input type="text" name="content" value="Your message here"><br><br>
+			<input type="submit" value="Send">
+		</form>
+		<h1>Nana's Education</h1>	
+		<p>	</p>	
+    <a href="/">Go back home</a>
+    </body>
+</html>

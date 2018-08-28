@@ -1,0 +1,85 @@
+<!-- howdy/templates/contact.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Nana Contact!</title>
+		<script src="https://www.w3schools.com/lib/w3.js"></script>		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>
+            function call_counter(url, pk) {
+                window.open(url);
+                $.get('YOUR_VIEW_HERE/'+pk+'/', function (data) {
+                    alert("counter updated!");
+                });
+            }
+        </script>
+    </head>
+	{% load static %}
+    <body background="{% static "pictures/117573.jpg" %}">
+        <h1>About Nana</h1>
+		<div w3-include-html="menu.html"></div>
+    <p style="color:#FF0000";>
+		We hope to bring you the most interesting way to learn English and I hope you all enjoy English as I do. 
+    </p>
+	<form action="/post/400/" method="get">
+		Name:<br>
+		<input type="text" name="name" value="Dang Minh"><br>
+		Email or phone number:<br>
+		<input type="text" name="email_or_phone" value="0909542310"><br><br>
+		<input type="text" name="content" value="Your message here"><br><br>
+		<input type="submit" value="Agree">
+	</form>
+	<div w3-include-html="menu.html"></div>
+    <a href="/">Go back home</a>
+	
+	<!-- 1 part -->
+	<br>
+	{% load static %}
+	<img src="{% static "pictures/117570.jpg" %}" alt="My image"/>
+	<img src="{% static "pictures/117571.jpg" %}" alt="My image"/>
+	
+	<!-- 1 part -->
+	<br>
+	<button onclick="call_counter('http://www.google.com', 12345);">
+            I update object 12345
+        </button>
+        <button onclick="call_counter('http://www.yahoo.com', 999);">
+            I update object 999
+        </button>
+	
+	<!-- 1 part -->
+	<br>	
+	<time id="msg"></time>
+	<script>
+	  document.getElementById("msg").innerHTML = Date();
+	</script>
+	
+	<!-- 1 part -->
+	<br>	
+	<input id="go" type="button" value="Open new window" onclick="window.open('writing/','popUpWindow','height=500, width=400, left=100, top=100, resizable=yes, scrollbars=yes, toolbar=yes, menubar=no, location=no, directories=no, status=yes');">
+    
+	<!-- 1 part -->
+	<br>	
+	<input id="go" type="button" value="Print this Page" onclick="window.print();">
+	
+	<br>
+	<input type="button" value="Refresh Page" onclick="document.location.reload(true);">
+	<!-- Test the refresh by outputting the time in milliseconds -->
+	<script>
+	  var a = new Date().getTime();
+	   document.write("<br>"); 
+	  document.write(a); 
+	  document.write("<br>"); 
+		if (a % 2) {
+			document.write("HCM la noi toi song rat nhieu nam <br>"); 
+			document.write("Roi cung phai song thoi<br>"); 
+		}
+		document.write("Ha noi la noi toi chi moi den lan dau<br>"); 
+		document.write("khong co gi la phuc tap ca<br>"); 
+	</script>
+	<img src="{% static "pictures/117570.jpg" %}" alt="My image"/>
+	<img src="{% static "pictures/117571.jpg" %}" alt="My image"/>
+	<img src="{% static "pictures/117572.jpg" %}" alt="My image"/>
+	</body>
+</html>

@@ -1,0 +1,308 @@
+<!-- ieltsapp/templates/about.html -->
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Speaking with Nana!</title>
+		<script src="https://www.w3schools.com/lib/w3.js"></script>
+		<link rel="stylesheet" type="text/css" href='{% static "/css/foundation.css" %}'>
+<link rel="stylesheet" type="text/css" href='{% static "/css/menu.css" %}'>				
+	<style>
+		#top{
+	background-image: url('{% static "pictures/117578.jpg" %}');
+
+		}
+		</style>		
+    </head>
+	
+    <body>	
+	<div id="top" align="center">
+			<h1>Nana the world of IELTS!</h1>
+		</div>
+<div class="horitical-menu">
+		<ul class="horizontal">
+		  <li><a href="/">Home</a></li>		  
+		  <li><a href="/listening">Listening</a></li>
+		  <li><a href="/speaking" class="active">Speaking</a></li>
+		  <li><a href="/reading">Reading</a></li>
+		  <li><a href="/writing">Writing</a></li>
+		  </ul>
+		</div>
+		<div class="mains">
+			<div class="ui_columns datepicker_box trip_search metaDatePicker  rounded_lockup easyClear usePickerTypeIcons hasDates with_children">
+				<div class="prw_rup prw_search_typeahead ui_column is-3 responsive_inline_priority search_typeahead wctx-tripsearch" name="search_typeahead">
+					<div class="ui_picker">
+					<span class="typeahead_align ui_typeahead">
+					<input type="text" class="typeahead_input" tabindex="1" placeholder="Phrases or topics" autocorrect="off" spellcheck="false"></span>
+					<div class="data_holder hidden"></div>
+					</div>
+				</div>
+				<div class="prw_rup prw_common_form_submit ui_column responsive_inline_hidden submit_wrap">
+					<button id="SUBMIT_HOTELS" class="form_submit" tabindex="5">
+					<span class="ui_icon search submit_icon"></span>
+					<span class="submit_text">Find topics</span>
+					</button><span class="ui_loader dark fill"></span>
+				</div>
+			</div>
+		</div>
+		<div class="left-main">
+			<div class="shelf_header">
+				Part 1
+			</div>			
+			<div class="item-image-parent shelf_item_container ui_columns">
+			{% for v in part1 %}
+				<div class="   ui_column">
+					<div class="poi ui_shelf_item_container ">
+						<a href="{{v.html}} " class="ui_poi_thumbnail ">						
+						<div class="image_wrapper  ">
+						<img src="{{v.img}}"  alt="{{v.caption}}" class="image">
+					</div>
+					<span class="item name" title="{{v.caption}}">{{v.caption}}</span></a>
+				</div>
+				</div>
+			{% endfor %}
+			</div>
+		
+			<div class="shelf_header">
+				Part 2
+			</div>			
+			<div class="item-image-parent shelf_item_container ui_columns">
+			{% for v in part2 %}
+				<div class="   ui_column">
+					<div class="poi ui_shelf_item_container ">
+						<a href="{{v.html}} " class="ui_poi_thumbnail ">						
+						<div class="image_wrapper  ">
+						<img src="{{v.img}}"  alt="{{v.caption}}" class="image">
+					</div>
+					<span class="item name" title="{{v.caption}}">{{v.caption}}</span></a>
+				</div>
+				</div>
+			{% endfor %}
+			</div>
+			
+			<div class="shelf_header">
+				Part 2
+			</div>			
+			<div class="item-image-parent shelf_item_container ui_columns">
+			{% for v in part2 %}
+				<div class="   ui_column">
+					<div class="poi ui_shelf_item_container ">
+						<a href="{{v.html}} " class="ui_poi_thumbnail ">						
+						<div class="image_wrapper  ">
+						<img src="{{v.img}}"  alt="{{v.caption}}" class="image">
+					</div>
+					<span class="item name" title="{{v.caption}}">{{v.caption}}</span></a>
+				</div>
+				</div>
+			{% endfor %}
+			</div>
+			
+			<div class="shelf_header">
+				Part 3
+			</div>			
+			<div class="item-image-parent shelf_item_container ui_columns">
+			{% for v in part3 %}
+				<div class="   ui_column">
+					<div class="poi ui_shelf_item_container ">
+						<a href="{{v.html}} " class="ui_poi_thumbnail ">						
+						<div class="image_wrapper  ">
+						<img src="{{v.img}}"  alt="{{v.caption}}" class="image">
+					</div>
+					<span class="item name" title="{{v.caption}}">{{v.caption}}</span></a>
+				</div>
+				</div>
+			{% endfor %}
+			</div>
+			
+		
+		</div>
+		<div class="right-main">		
+			<div class="spacerlist">
+			      
+			      <h3>Hightlight topics | <a href="index-worksheets.htm">Worksheets!</a></h3>
+			      <ul>
+			        <li><strong>Level 2</strong> <a href="english/level2-beginners-true.htm">Work</a></li>
+			        <li><strong>Level 3</strong> <a href="english/level3-beginners-high.htm">Traveling</a></li>
+			        <li><strong>Level 4</strong><a href="english/level4-intermediate-low.htm">Work</a></li>
+			        <li><strong>Level 5</strong> <a href="english/level5-intermediate-true.htm">50Lessons for Mid Intermediate</a></li>
+			        <li><strong>Level 6</strong> <a href="english/level6-intermediate-high.htm">50 Lessons for High Intermediate</a></li>
+			        <li><strong>Level 7</strong> <a href="english/level7-advanced.htm">50 Lessons for Advanced</a></li>
+		          </ul>		      
+			</div>		     
+		</div>				
+		
+        <h1>Menu</h1>
+		<li><a href="/">Go back home</a>
+		<li><a href="/writing">Writing</a>
+		<li><a href="/reading">Reading</a>
+		<li><a href="/listening">Listening</a>
+		<li><a href="/about">About Nana</a>
+		<div w3-include-html="menu.html"></div>
+		<h1 class="tittle">Topic</h1>
+		<li>Family
+		<li>Work
+		<li>Education
+		<li>Film
+		<li>Shopping
+		<h3 style="color:#20B2AA";>Paragraph</h3>
+		<li>It is <i> A </i>
+		<li>They are <i> B </i>
+		<li>Be sure <i> C </i>
+		<h3 style="color:#B0C4DE";>Paragraph</h3>
+		 <div>Hello</div>
+		<div>World</div>
+		<h2 style="background-color:powderblue;">2018/01/26</h2>
+		<form action="/post/200/" method="get">
+		  Title:<br> <input type="text" name="title" value="Harry Porter" ><br>		
+		  Message:<br> <input type="text" name="text" value="Never give up" rows=10><br>	
+		  Date:<br><input type="text" name="published_date" value="20170801"><br>		    
+		  <input type="submit" value="Post Details">
+		</form>
+		
+		<h2 style="background-color:powderblue;">2018/01/25</h2>
+		<form action="/user/haha/" method="get">
+		  Message:<br> <input type="text" name="message" value="Hi!"><br>		 
+		  <input type="submit" value="Send">
+		</form>
+		<form action="/user/hihi/" method="get">
+		  Message:<br>
+		  <input type="text" name="message" value="Hi!"><br>		 
+		  <input type="submit" value="Send">
+		</form>
+		<form action="/user/hoho/" method="get">
+		  Message:<br> <input type="text" name="message" value="Hi!"><br>		 
+		  <input type="submit" value="Send">
+		</form>
+		<h2 style="background-color:powderblue;">2018/01/24</h2>
+		<li>Select.
+		<form>
+		  <input type="radio" name="gender" value="male" checked> Male<br>
+		  <input type="radio" name="gender" value="female"> Female<br>
+		  <input type="radio" name="gender" value="other"> Other
+		</form>
+		
+		<h2 style="background-color:powderblue;">2018/01/23</h2>
+		<form action="/post/new/" method="post">
+		  Name:<br>
+		  <input type="text" name="firstname" value="Mickey"><br>
+		  Email or phone:<br>
+		  <input type="text" name="lastname" value="Mouse"><br><br>
+		  <input type="submit" value="Register">
+		</form>
+		
+		<h2 style="background-color:powderblue;">2018/01/22</h2>
+		<form action="/post" method="get">
+		  First name:<br>
+		  <input type="text" name="firstname" value="Mickey"><br>
+		  Last name:<br>
+		  <input type="text" name="lastname" value="Mouse"><br><br>
+		  <input type="submit" value="Submit">
+		</form>
+
+		<h2 style="background-color:powderblue;">2018/01/21</h2>
+		<li>I'm going to Lam's wedding today.
+		
+		<form action="/your-name/" method="post">
+			<label for="your_name">Your name: </label>
+			<input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+			<input type="submit" value="OK">
+		</form>
+		
+		
+		<h2 style="background-color:powderblue;">2018/01/20</h2>
+		<p style="color:#FF0000"; text-align:justify>
+			<li>Reading is a skill that I think I need to spend more time to practice. 
+			<li>I want to write my own website with some simple information that I want to provide to my friends and customer to encourage them to invest a good chance for Vietnam economy.
+		</p>	
+	
+		<h2 style="background-color:powderblue;">2018/01/19</h2>
+		<p style="color:#FF0000";>
+			<li>Reading something is a skill that we need all the time. 
+			<li>I found that reading is not good for me. So I plan to write a website to install my information about how I can have a good connect from the text to my mind. There would be a link.
+		</p>
+		
+		<div class="slideshow-container">
+		
+			<div class="mySlides fade">
+				  <div class="numbertext">1 / 3</div>
+				  <img src="{% static "pictures/117573.jpg" %}" style="width:100%">
+				  <div class="text">Caption Text</div>
+			</div>
+			
+			<div class="mySlides fade">
+				  <div class="numbertext">2 / 3</div>
+				  <img src="{% static "pictures/117574.jpg" %}" style="width:100%">
+				  <div class="text">Caption Two</div>
+			</div>
+
+			<div class="mySlides fade">
+				  <div class="numbertext">3 / 3</div>
+				  <img src="{% static "pictures/117575.jpg" %}" style="width:100%">
+				  <div class="text">Caption Three</div>
+			</div>
+
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+		</div>
+		<br>
+		<div style="text-align:center">
+			  <span class="dot" onclick="currentSlide(1)"></span> 
+			  <span class="dot" onclick="currentSlide(2)"></span> 
+			  <span class="dot" onclick="currentSlide(3)"></span> 
+		</div>
+		
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			  var dots = document.getElementsByClassName("dot");
+			  if (n > slides.length) {slideIndex = 1}    
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+				  slides[i].style.display = "none";  
+			  }
+			  for (i = 0; i < dots.length; i++) {
+				  dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";  
+			  dots[slideIndex-1].className += " active";
+			}
+		</script>
+		
+		
+		<script src="{% static "js/jquery-1.11.1.js" %}"></script>
+		<script src="{% static "js/rango-jquery.js" %}"></script>
+
+		<script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
+        <div class="g-hangout" id="hangout-giLkojRpuK"
+                                data-render="createhangout">
+        </div>
+		<script>
+          window.onload = function() {
+
+              var userImage = document.getElementById("img-giLkojRpuK");
+              var hangoutButton = document.getElementById("hangout-giLkojRpuK");
+
+              userImage.onclick = function() {
+
+                console.log("in onclick");
+                hangoutButton.click(); // this will trigger the click event
+              };
+          };
+        </script>
+    <a href="/">Go back home</a>
+    </body>
+</html>

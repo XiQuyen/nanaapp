@@ -1,0 +1,246 @@
+<!-- howdy/templates/about.html -->
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Nana!</title>
+		<link rel="stylesheet" type="text/css" href='{% static "/css/foundation.css" %}'>	
+		<style>			
+			
+			.on_normal_1{						
+				background-color:powderblue;
+				text-align: center;			
+				
+			}
+			.on_normal_2{	
+				background-color: lightgrey;
+			}
+			.grid_header{				
+				color: powderblue;
+				text-align: left;	
+			}
+			.grid_pannel{
+				float:left;
+				width:400px;
+				height: 350px;
+				background-color: white
+				color: black;
+				margin: 10px;
+			}
+			.cell_comment{
+			    color: black; 
+				font-family:Arial;
+				background-color: lightgrey;	
+				clear: both;
+			}
+			.cell_header{			    
+				font-family:Arial;
+				background-color: #ECECEC;
+				text-align: left;
+				color: white;
+			}
+			.table_header {
+				border: none;
+				background-color: lightgrey;
+				color: white;
+				width: 100%;
+			}
+			.section_001{	
+                float: left;			
+				background-color: #A500EC;
+				display: grid;
+			}
+			.floating-box {
+				float: left;
+				background-color:powderblue;
+				width: 150px;
+				height: 75px;
+				margin: 10px;
+				border: 3px solid #73AD21;  
+				display: grid;
+				min-height:100px
+			}
+			.text{
+			    font-family:Arial;
+			    color: black; 
+			}
+			.vitri{
+			    float: left;	
+				background-color: #A500EC;
+			}
+			p {
+				width: 900px;
+				margin-right: auto; 
+				margin-left: auto; 
+			}			
+            #logo{
+				border: none;
+				height: 150px;
+				width: 150px;
+				float:left;
+			}			
+			#right-of-logo{
+				border: none;
+				height: 350px;
+				float:left;
+			}		
+			#menu{
+				border: none;
+				
+			}
+			#search{
+				border: none;
+			}
+			#on-left{
+				color: #A50044;
+				border: none;
+				width: 300px;
+				margin: 10px;
+				float:left;
+			}
+			#on-center{
+				color: #A500EC;
+				border: none;
+				width: 600px;
+				margin: 10px;
+				float:left;
+			}
+			#on-right{
+				color: #0000EC;
+				border: none;
+				width: 300px;
+				margin: 10px;
+				float:left;
+			}
+			.on-right-stop{			
+				clear: both;
+				color: white;
+				background-color:white;
+			}
+			#items{
+				border: none;
+			}
+			#bottom-before-container{				
+				text-align: left;		
+			}
+			.bottom-before-heading{
+				color: red;
+                font-weight:bold;				
+			}
+			.bottom-before-detail-container{
+				float:left;	
+				width: 200px;	
+				color: blue;					
+			}
+			.bottom-before-detail-line{				
+				text-align: left;		
+				color: black;
+			}
+			#bottom{				
+				text-align: center;		
+			}
+		</style>		
+    </head>
+    <body>
+		<div id="top">.</div>
+		<div id="logo"> Logo Here</div>  	
+		<div id="right-of-logo"> 
+			<div id="menu"> Menu|Menu|Menu|Menu</div>  
+			<div id="search">Search Here </div>
+			<div id="search">Login Here </div>
+		<div>
+		<div id="on-right-stop"> .
+		</div>
+		<div id="on-left">
+			<div id="items"> The loai sach </div>
+			<div id="items"> Sach moi </div>
+			<div id="items"> Tac gia moi </div>
+		</div>
+		<div id="on-Center">
+			<div id="items"> Sach van hoc </div>
+			<div id="items"> Sach ngoai ngu </div>
+		</div>
+		<div id="on-right">
+			<div id="items"> Sach hay nhat/yeu thich nhat </div>
+			<div id="items"> Sach hay trong thang </div>
+		</div>
+		<div class="on-right-stop"> . </div>
+		<div id="bottom-before-container">
+			<div class="bottom-before-heading"> Tac gia </div>
+					
+			<div class="bottom-before-detail-container"> 
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>				
+			</div>
+			<div class="bottom-before-detail-container"> 
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>				
+			</div>
+			<div class="bottom-before-detail-container"> 
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>				
+			</div>
+			<div class="on-right-stop"> .
+	
+			<div class="bottom-before-heading"> Nha xuat ban </div>			
+			<div class="bottom-before-detail-container"> 
+				<div class="bottom-before-detail-line"> <p>Nguyen Nhat Anh <p> Nguyen Nhat Anh <br> <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="on-right-stop"> .
+			</div>
+			<div class="bottom-before-detail-container"> 
+				<div class="bottom-before-detail-line"> <p>Nguyen Nhat Anh <p> Nguyen Nhat Anh <br> <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="on-right-stop"> .
+			</div>
+			<div class="bottom-before-detail-container"> 
+				<div class="bottom-before-detail-line"> <p>Nguyen Nhat Anh <p> Nguyen Nhat Anh <br> <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="on-right-stop"> .
+			</div>
+			<div class="on-right-stop"> .		
+			<div class="bottom-before-heading"> Sach day lam nguoi </div>
+				
+			<div class="bottom-before-detail-container"> 
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="on-right-stop"> .
+			</div>
+			<div class="bottom-before-detail-container"> 
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="on-right-stop"> .
+			</div>
+			<div class="bottom-before-detail-container"> 
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="bottom-before-detail-line"> Nguyen Nhat Anh <div>
+				<div class="on-right-stop"> .
+			</div>
+			<div class="on-right-stop"> .		
+		</div>
+		<div id="bottom">
+			<p>Copyrights</p>
+			<p>Copyrights</p>
+		</div>
+		
+    </body>
+</html>

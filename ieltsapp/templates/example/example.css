@@ -1,0 +1,408 @@
+a {
+  text-decoration: none;
+}
+
+a:active {
+  color: teal;
+}
+
+a:hover {
+  color: rebeccapurple;
+  text-decoration: underline;
+}
+
+a:link {
+  color: gray;
+}
+
+a:visited {
+  color: green;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: red;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+a.menu {	
+  padding: 10px 25px;
+  text-decoration: none;
+}
+a.link {
+	color: white;
+	display: inline-block;
+	text-decoration: none;
+}
+
+li {
+    text-align: left;    
+}
+li.menu-line {
+	text-align: center;    
+	border-bottom: 1px solid #555;	
+	background-color: green;  
+	color: white;
+}
+
+li.end-box {
+	text-align: right;    
+	display: inline-block;
+	color: green;
+}
+
+
+li a {
+    display: block;
+    width: 60px;
+}
+
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+img {
+  margin: auto;
+  padding-top: 40px;
+  padding-right: 25px;
+  padding-bottom: 40px;
+  padding-left: 25px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+input:focus{
+    outline: none;
+    box-shadow: 0px 0px 5px #61C5FA;
+    border-color: #5AB0DB;
+}
+
+input:hover {
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+p {
+  font-size: 100%;
+  color: dimgray;
+}
+
+p.off-1 {
+	border-radius: 2px;
+	color: green;
+	font-size: 32px;
+	height: 35px;
+	opacity: 0.5;
+	background-color: #ddd;
+	transform: rotate(310deg) translate(-20%, -35px);
+	/*transform-origin: 50% 50%;*/
+	transform-origin: 70% -30%;
+	width: 45%;
+	/*top: -35px 100px 10px 100px;*/
+	position: relative;
+}
+p.off-2 {
+	border-radius: 2px;
+	color: green;
+	font-size: 32px;
+	height: 35px;
+	opacity: 0.5;
+	background-color: #ddd;
+	transform: rotate(45deg) translate(150px, -105px);
+	/*transform-origin: 50% 50%;*/
+	transform-origin: 70% -30%;
+	width: 45%;
+	/*top: -35px 100px 10px 100px;*/
+	position: relative;
+}
+
+p.off-3 {
+	border-radius: 2px;
+	color: green;
+	font-size: 32px;
+	height: 35px;
+	opacity: 0.5;
+	background-color: #ddd;
+	
+	/*transform-origin: 50% 50%;*/
+	transform-origin: 70% -30%;
+	width: 45%;
+	/*top: -35px 100px 10px 100px;*/
+	position: relative;
+}
+
+
+p.expire{
+	color: brown;
+	font-size: 8px;
+	text-align: right;
+}
+
+p.important {
+  border-style: solid;
+  border-width: 5px;
+  border-color: white;
+}
+
+p.ten-truong {
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  border-bottom-width: 1px;
+  text-align: left;
+  color: green;
+  font-variant: small-caps;
+  font-size: 130%;
+}
+
+
+p.more-info {  
+  font-size: 70%;
+  text-align: right;
+  color: blue;
+}
+
+p.smallcaps {
+  font-variant: small-caps;
+}
+p.everyday{
+	font-size: 200%;
+}
+tr:hover {
+  background-color: #ddd;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	background-color: #f1f1f1;
+	border: 1px solid #555;
+}
+ ul.end-box {
+	vertical-align: bottom;
+	/*position: absolute;*/
+	font-size: 80%;
+	top: 290px;
+	right; 5px;
+}
+.suggest {
+	border-radius: 5px;
+	background-color: white;
+	height: 100%;
+	width:  20%;
+	float: left;
+	padding: 8px;
+	border: 1px solid #f1f1f1;
+	margin: 5px;
+	display: table-cell;	
+	} 
+.search_container {
+}
+.search_container a {
+}
+.search_container a:hover {
+}
+.search_container a:active {
+}
+
+.search_container.row {
+}
+.search_container.first-cell {
+}
+.search_container.second-cell {
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+	font-family: Roboto;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #2196F3;
+    color: white;
+}
+
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+.suggest-break {
+	float: clear
+}
+.suggest span {
+	align-self: flex-end;
+	font-size: 10px;
+}
+.menu-container{
+	font-family: Century Gothic, sans-serif;
+	width: 25%;
+	float: left;
+}
+.menu-container-last{
+	float: none;
+	width: 25%;
+}
+.two-container {
+	background-color: #f7dfb2;
+}
+.logo {
+	background-color: #f7dfb2;
+	height: 252px;
+	width:  25%;
+	float: left;
+	border: 1px solid #555;
+}
+.text-description {
+	padding-left: 0.3cm;
+	background-color: #cff7dc;
+	height: 250px;
+	width:  70%;
+	float: left;
+	color: white;
+	font-family: Century Gothic, sans-serif;
+	border: 1px solid #555;
+	position: relative;
+}
+
+.text-description-in {	
+	background-color: #eed7ef;
+	height: 50px;
+	width:  90%;
+	color: white;
+	font-family: Century Gothic, sans-serif;
+	border: 1px solid #555;
+}
+
+.learn {	
+	height: 100%; /* Full height */
+    position: fixed; /* Make it stick, even on scroll */
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}
+.center {
+  display: block;
+  margin: auto;
+}
+
+.centertext {
+  text-align: center;
+}
+
+.defaultTextBox {
+    padding: 0;
+    height: 40px;
+	width: 526px;
+    position: relative;
+    left: 0;
+    outline: none;
+    border: 1px solid #cdcdcd;
+    border-color: rgba(0,0,0,.15);
+    background-color: white;
+    font-size: 20px;
+}
+.advancedSearchTextbox {
+    width: 526px;
+    margin-right: -4px;
+}
+
+.everyday-deal{	
+	border: 1px solid #f1f1f1;	
+	font-size: 20px;
+	height: 170px;
+	width:  290px;
+	float: left;
+	background-image: url("0001.jpg");	
+	border-radius: 15px 50px;
+}
+
+.everyday-deal-text{	
+	border: 1px solid #f1f1f1;	
+	font-size: 20px;
+	height: 100%;
+	width:  100%;
+	float: left;
+	background-color: #f1f1f1;
+}
+.top-school-text{	
+	border: 1px solid #f1f1f1;	
+	font-size: 20px;
+	height: 100%;
+	width:  100%;
+	float: left;
+	background-color: #bcf4cd;
+	color: #043012;
+}
+.off{
+	/*position: absolute;*/
+	font-size: 12px;
+	height: 18px;
+	/*position: fixed;*/
+}
+
+.info{
+	/*position: absolute;*/
+	font-size: 12px;
+	height: 18px;
+}
+.get-coupon{
+	/*position: absolute;*/
+	border: 1px solid #f1f1f1;	
+	font-size: 8px;
+}
+.detail{
+	position: absolute;
+	font-size: 12px;
+}
+
+.fix-telephone-number{
+	position: fixed;
+	height: 18px;
+	text-align: left;
+	bottom:0;
+    right:0;
+}
+.fixedurl {
+    position: fixed;
+    bottom: 150px;
+    right: 0px; 	
+	background-color: #eaf2fb;
+	color: #669900;
+	font-family: Arial;
+	font-size: 14px;
+}
+
+.fixedbutton {
+    position: fixed;
+    bottom: 0px;
+    right: 0px; 	
+	background-color: #eaf2fb;
+	color: #669900;
+	font-family: Arial;
+	font-size: 14px;
+}

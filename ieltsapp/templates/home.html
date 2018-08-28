@@ -1,0 +1,114 @@
+<form method="post" novalidate>
+  {% csrf_token %}
+  {{ form }}
+  <button type="submit">Submit</button>
+</form>
+
+<form method="post" novalidate>
+  {% csrf_token %}
+  <table border="1">
+    {{ form }}
+  </table>
+  <button type="submit">Submit</button>
+</form>
+
+<form method="post" novalidate>
+  {% csrf_token %}
+
+  {{ form.non_field_errors }}
+
+  {% for hidden_field in form.hidden_fields %}
+    {{ hidden_field.errors }}
+    {{ hidden_field }}
+  {% endfor %}
+
+  <table border="1">
+    {% for field in form.visible_fields %}
+      <tr>
+        <th>{{ field.label_tag }}</th>
+        <td>
+          {{ field.errors }}
+          {{ field }}
+          {{ field.help_text }}
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+
+  <button type="submit">Submit</button>
+</form>
+
+
+<form method="post" novalidate>
+  {% csrf_token %}
+
+  {{ form.non_field_errors }}
+
+  {{ form.source.errors }}
+  {{ form.source }}
+
+  <table border="1">
+
+      <tr>
+        <th>{{ form.name.label_tag }}</th>
+        <td>
+          {{ form.name.errors }}
+          {{ form.name }}
+        </td>
+      </tr>
+
+      <tr>
+        <th>{{ form.email.label_tag }}</th>
+        <td>
+          {{ form.email.errors }}
+          {{ form.email }}
+        </td>
+      </tr>
+
+      <tr>
+        <th>{{ form.message.label_tag }}</th>
+        <td>
+          {{ form.message.errors }}
+          {{ form.message }}
+          <br />
+          {{ form.message.help_text }}
+        </td>
+      </tr>
+
+  </table>
+
+  <button type="submit">Submit</button>
+</form>
+
+
+<input type="{{ widget.type }}"
+       name="{{ widget.name }}"
+       {% if widget.value != None %} value="{{ widget.value|stringformat:'s' }}"{% endif %}
+       {% include "django/forms/widgets/attrs.html" %} />
+	   
+	   
+{% for name, value in widget.attrs.items %}
+  {% if value is not False %}
+    {{ name }}{% if value is not True %}="{{ value|stringformat:'s' }}"{% endif %}
+  {% endif %}
+{% endfor %}
+
+<input type="text"
+       name="name"
+       id="id_name"
+       {% if form.name.value != None %}value="{{ form.name.value|stringformat:'s' }}"{% endif %}
+       maxlength="30"
+       required>
+<input type="text"
+       name="{{ form.name.name }}"
+       id="{{ form.name.id_for_label }}"
+       {% if form.name.value != None %}value="{{ form.name.value|stringformat:'s' }}"{% endif %}
+       maxlength="{{ form.name.field.max_length }}"
+       {% if form.name.field.required %}required{% endif %}>
+	   
+	   
+<form method="post" novalidate>
+  {% csrf_token %}
+  {% include 'includes/bs4_form.html' with form=form %}
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>	   

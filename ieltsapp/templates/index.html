@@ -1,0 +1,62 @@
+<!-- ieltsapp/templates/index.html -->
+{% load staticfiles %}
+
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Nana Ielts!</title>
+		<style>
+			body {
+				background-color: white;	
+				font-family: verdana;				
+				text-align: center;	
+				
+				}
+
+p {
+	font-family: verdana;
+	font-size: 20px;
+}
+
+li {
+	list-style-type: none;				
+	width: 125px;
+	height: 50px;
+	display:inline;
+	text-align: center;	
+}
+			
+			
+#top{
+	background-image: url('{% static "pictures/117577.jpg" %}');
+
+		}	
+			
+				
+		</style>
+    </head>
+    <body>
+		<div id="top" align="center">
+			<h1>Nana the world of IELTS!</h1>
+		</div>
+		
+		<ul class="menu">
+			<li><a href="/about/">Home</a>		
+			<li><a href="/reading/">Reading</a>
+			<li><a href="/writing/">Writing</a>
+			<li><a href="/reading/">Speaking</a>
+			<li><a href="/reading/">Listening</a>
+			<li><a href="/contact/">Contact</a>
+			<li><a href="/search/">Search</a>
+		</ul>
+		
+		
+		<img src="{% static "pictures/117575.jpg" %}" alt="My image 2"/>
+		
+		<div id="bottom" align="center">
+        <p>When we could speak English, you have more chances to be success!</p>
+		</div>
+    </body>
+</html>

@@ -1,0 +1,431 @@
+<!-- ieltsapp/templates/writing.html -->
+{% include "floppyforms/input.html" %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Writing!</title>
+		<link rel="import" href="imports\main_page_header.html">		
+		<link rel="stylesheet" type="text/css" href='{% static "/css/foundation.css" %}'>	
+		<link rel="stylesheet" type="text/css" href='{% static "/css/menu.css" %}'>				
+	<style>
+		#top{
+	background-image: url('{% static "pictures/117578.jpg" %}');
+
+		}
+		</style>
+		<style>
+						
+			p {			
+				text-align: justify;				
+				font-size: 14px;
+			}
+			.on_normal_1{						
+				background-color:powderblue;
+				text-align: center;				
+				
+			}
+			.on_normal_2{	
+				background-color: lightgrey;
+			}
+			.grid_header{				
+				color: white;
+				text-align: left;	
+			}
+			.grid_pannel{
+				float:left;
+				width:400px;
+				height: 350px;
+				background-color: white
+				color: black;
+				margin: 10px;
+			}
+			.cell_comment{
+			    color: black; 
+				font-family:Arial;
+				background-color: lightgrey;	
+				clear: both;
+			}
+			.cell_header{			    
+				font-family:Arial;
+				background-color: #ECECEC;
+				text-align: left;
+				color: white;
+			}
+			.table_header {
+				border: none;
+				background-color: lightgrey;
+				color: white;
+				width: 100%;
+			}
+			.section_001{	
+                float: left;			
+				background-color: #A500EC;
+				display: grid;
+			}
+			.floating-box {
+				float: left;
+				background-color:powderblue;
+				width: 150px;
+				height: 75px;
+				margin: 10px;
+				border: 3px solid #73AD21;  
+				display: grid;
+				min-height:100px
+			}
+			.text{
+			    font-family:Arial;
+			    color: black; 
+			}
+			.vitri{
+			    float: left;	
+				background-color: #A500EC;
+			}
+            #main{
+				background: #000;
+				border: 1px solid #AAAAAA;
+				padding: 10px;
+				color: #fff;
+				width: 100px;
+			}
+			#header{
+				background-image: url("\pictures\117570.jpg");
+			}
+		</style>
+    </head>
+    <body>
+	<div id="top" align="center">
+			<h1>Nana the world of IELTS!</h1>
+		</div>
+<div class="horitical-menu">
+		<ul class="horizontal">
+		  <li><a href="/">Home</a></li>
+		  <li><a href="/writing" class="active">Writing</a></li>
+		  <li><a href="/speaking">Speaking</a></li>
+		  <li><a href="/listening">Listening</a></li>
+		  <li><a href="/reading">Reading</a></li>
+		  </ul>
+		</div>
+		<div class="mains">
+		<div class="left-main">
+			<div class="shelf_header">
+				Part 1
+			</div>			
+			<div class="item-image-parent shelf_item_container ui_columns">
+			{% for v in part1 %}
+				<div class="   ui_column">
+					<div class="poi ui_shelf_item_container ">
+						<a href="{{v.html}} " class="ui_poi_thumbnail ">						
+						<div class="image_wrapper  ">
+						<img src="{{v.img}}"  alt="Punta Cana" class="image">
+					</div>
+					<span class="item name" title="Punta Cana">{{v.caption}}</span></a>
+				</div>
+				</div>
+			{% endfor %}
+			</div>
+		
+			<div class="shelf_header">
+				Part 2
+			</div>			
+			<div class="item-image-parent shelf_item_container ui_columns">
+			{% for v in part2 %}
+				<div class="   ui_column">
+					<div class="poi ui_shelf_item_container ">
+						<a href="{{v.html}} " class="ui_poi_thumbnail ">						
+						<div class="image_wrapper  ">
+						<img src="{{v.img}}"  alt="{{v.caption}}" class="image">
+					</div>
+					<span class="item name" title="{{v.caption}}">{{v.caption}}</span></a>
+				</div>
+				</div>
+			{% endfor %}
+			</div>
+			
+			<div class="shelf_header">
+				Part 2
+			</div>			
+			<div class="item-image-parent shelf_item_container ui_columns">
+			{% for v in part2 %}
+				<div class="   ui_column">
+					<div class="poi ui_shelf_item_container ">
+						<a href="{{v.html}} " class="ui_poi_thumbnail ">						
+						<div class="image_wrapper  ">
+						<img src="{{v.img}}"  alt="{{v.caption}}" class="image">
+					</div>
+					<span class="item name" title="{{v.caption}}">{{v.caption}}</span></a>
+				</div>
+				</div>
+			{% endfor %}
+			</div>
+			
+			<div class="shelf_header">
+				Part 3
+			</div>			
+			<div class="item-image-parent shelf_item_container ui_columns">
+			{% for v in part3 %}
+				<div class="   ui_column">
+					<div class="poi ui_shelf_item_container ">
+						<a href="{{v.html}} " class="ui_poi_thumbnail ">						
+						<div class="image_wrapper  ">
+						<img src="{{v.img}}"  alt="{{v.caption}}" class="image">
+					</div>
+					<span class="item name" title="{{v.caption}}">{{v.caption}}</span></a>
+				</div>
+				</div>
+			{% endfor %}
+			</div>
+			
+		
+		</div>
+		<div class="right-main">
+		
+		<div class="spacerlist">
+			      
+			      <h3>Study Plans | <a href="index-worksheets.htm">Worksheets!</a></h3>
+			      <ul>
+			        <li><strong>Level 2</strong> <a href="english/level2-beginners-true.htm">25  Lessons for  Beginners</a></li>
+			        <li><strong>Level 3</strong> <a href="english/level3-beginners-high.htm">50  Lessons for High Beginners</a></li>
+			        <li><strong>Level 4</strong><a href="english/level4-intermediate-low.htm"> 50 Lessons for Low Intermediate</a></li>
+			        <li><strong>Level 5</strong> <a href="english/level5-intermediate-true.htm">50Lessons for Mid Intermediate</a></li>
+			        <li><strong>Level 6</strong> <a href="english/level6-intermediate-high.htm">50 Lessons for High Intermediate</a></li>
+			        <li><strong>Level 7</strong> <a href="english/level7-advanced.htm">50 Lessons for Advanced</a></li>
+		          </ul>
+			      
+			      
+			      
+			      
+			      
+			      
+		</div>	      
+			     
+		        </div>
+				
+				
+		 </div>		
+				
+				
+				
+				
+		<!--<div id="main">
+			Welcome only one and unique we use id. 			
+		</div> -->
+		<div id="header">
+			<p>Welcome only one and unique we use id. </p>
+		</div>
+		<section class="grid_pannel">
+			<h1 class="cell_comment"> Example 0001 </h1>
+			<p>When a person is described as hard-working, this is almost always seen as a positive trait or attitude.</p>
+			<p>In the realm of education, we expect hard workers to diligently follow instructions, pass their exams, achieve good grades and take their first steps on the path to a successful career.</p>
+			
+		</section>
+		<section class="grid_pannel">
+			<h1 class="cell_comment"> Example 0002 </h1>
+			<p>  Similarly, in an employment setting, we expect the most motivated, industrious and committed individuals to rise to the top and become leaders or experts in their fields. </p>
+			<p>However, I believe that in some people the desire to work hard can become an unhealthy obsession with perfection, outcompeting others or being the best. </p>
+			
+		</section>
+		<section class="grid_pannel">
+			<h1 class="cell_comment"> Example 0003 </h1>
+			<p>When people work so hard that they neglect family and relationships or become stressed and irritable, a positive trait has surely become detrimental.</p>
+		</section>
+		<section class="grid_pannel">
+			<h1 class="grid_header"> Example 0004.0003 </h1>
+			<p>I'm hungry ...</p>
+			<p>I'm hungry and I can't sleep at night that would never good for me...</p>
+			<p>I'm hungry and I can't sleep at night that would never good for me...</p>
+			<p>I'm hungry and I can't sleep at night that would never good for me...</p>
+		</section>
+		<section class="grid_pannel">
+			<h1 class="grid_header"> Example 0004.0003 </h1>
+			<p>I'm hungry ...</p>
+			<p>I'm hungry and I can't sleep at night that would never good for me...</p>
+			<p>I'm hungry and I can't sleep at night that would never good for me...</p>
+			<p>I'm hungry and I can't sleep at night that would never good for me...</p>
+		</section>
+		
+		<section>		
+		    <table class="table_header" >
+			    <tr style="background-color: none; text-align: right;height: 25px;">
+					<td colspan = "3"></td>
+					<td colspan = "3" bgcolor = "#b5dcb3">						
+					</td>
+				</tr>
+				<tr style="background-color: none; text-align: right;font-size: 50px;font-family: verdana;">
+					<td colspan = "3"></td>
+					<td colspan = "3" bgcolor = "#b5dcb3">
+						Happiness from mind
+					</td>
+				</tr>
+				<tr style="background-color: none; text-align: right;height: 25px;">
+					<td colspan = "3"></td>
+					<td colspan = "3" bgcolor = "#b5dcb3">						
+					</td>
+				</tr>
+				<tr style="text-align: right;font-size: 20px;font-family:Georgia;">
+					<td colspan = "2"></td>
+					<td colspan = "5" bgcolor = "#b5dcb3">
+						All is one journey that we spent our time and never regret. We could go as further as we can.
+					</td>
+				</tr>
+				<tr style="text-align: right;height: 25px;">
+					<td colspan = "2"></td>
+					<td colspan = "5" bgcolor = "#b5dcb3">						
+					</td>
+				</tr>
+				<tr>
+				    <td width="400px"></td>
+					<td width="70px"><a href="#">HOME</a></td>
+					<td width="120px"><a href="/reading">READING</a></td>
+					<td width="120px"><a href="#">WRITING</a></td>
+					<td width="80px"><a href="#">ABOUT</a></td>
+					<td ><input type="search" placeholder="search"></td>
+				</tr>
+			 
+				<tr valign = "top" min-height = "1500px">
+					<td bgcolor = "#aaa" >
+						<b>Main Menu</b>
+						<br /> HOME
+						<br /> READING
+						<br /> WRITING
+						<br /> ABOUT
+					</td>
+				
+				<td colspan = "4" width = "500" height = "200" style ="background-color:white;color:black;">
+					<br>
+					<li style="list-style: none;"> Technical and Managerial Tutorials point Technical and Managerial Tutorials point Technical and Managerial Tutorials point
+					<br>
+					<li style="list-style: none;"> Technical and Managerial Tutorials point Technical and Managerial Tutorials point Technical and Managerial Tutorials point Technical and Managerial Tutorials point
+					<br>
+					<li style="list-style: none;"> Technical and Managerial Tutorials point Technical and Managerial Tutorials point Technical and Managerial Tutorials point Technical and Managerial Tutorials point Technical and Managerial Tutorials point
+					<br>
+					<li style="list-style: none;"> Technical and Managerial Tutorials point
+					<table >
+					<tr><td style="width:50%;">A</td> <td>B</td></tr>
+					<tr><td style="width:50%;">C</td> <td>D</td></tr>
+					</table>
+				</td>
+				<td>
+					<li> In my experience, there are three main factors that influence how hard people study or work. 
+					<li> One key factor that drives people and makes them more studious and goal-oriented is parental pressure. 
+					<li> Some medical students, for example, are motivated to study hard because they do not wish to disappoint family members who expect them to graduate successfully and become doctors.
+				</td>
+			 </tr>
+			 <tr>
+				<td colspan = "6" bgcolor = "#b5dcb3">
+				   <center>
+					  Copyright © 2018 Nana's Corner
+				   </center>
+				</td>
+			 </tr>
+			 
+		  </table>
+			<li class="city"> Ha Noi mua nay vang nhung con mua
+			<li class="city"> Lay troi mua xuong
+		</section>
+		
+		<section>
+			<h1>Example 0002 </h1>
+				<h2>2018/01/28</h2>
+				<table style="width:100%;" background="/pictures/117570-Beautiful-View.jpg">
+				  <tr>
+					<th>Firstname</th>
+					<th>Lastname</th> 
+					<th>Age</th>
+				  </tr>
+				  <tr>
+					<td>Jill</td>
+					<td>Smith</td> 
+					<td>50</td>
+				  </tr>
+				  <tr>
+					<td>Eve</td>
+					<td>Jackson</td> 
+					<td>94</td>
+				  </tr>
+				</table>
+
+				<h2 style="background-color:powderblue;">2018/01/20</h2>
+				<p style="color:blue;"> Con mua nao </p>
+				<li>Writing something is a skill that we need all the time. 
+				<li>Reviews
+		</section>	
+		<section>
+			<h1>Example 0001</h1>
+			<h2 class="city">London</h2>
+			<p>London is the capital of England.</p>
+
+			<h2 class="city">Paris</h2>
+			<p>Paris is the capital of France.</p>
+
+			<h2 class="city">Tokyo</h2>
+			<p>Tokyo is the capital of Japan.</p>		
+			<p style="color:blue;">
+			</p>
+				<br>
+				<li>Writing something is a skill that we need all the time. 
+				<li>Reviews
+				<br>
+		</section>
+		
+		<section>
+			<h2 style="background-color:powderblue;">2018/01/19</h2>
+			<p>
+				Writing something is a skill that we need all the time. 
+			</p>
+			<p>
+				<li style=" margin-left: -1.5em;">Writing something is a skill that we need all the time. 
+				<li style=" margin-left: -1.5em;">Reviews
+			</p>
+			<p>
+				<br>
+				<form> First name:<br> <input type="text" name="firstname"><br>		
+				Last name:<br>
+				<input type="text" name="lastname">
+				</form>
+				<br>
+			</p>
+			
+			<div style = "background-color:#b5dcb3; width:100%">
+				<h1>This is Web Page Main title</h1>
+			 </div>
+				
+			 <div style = "background-color:#aaa; height:400px; width:200px; float:left;">
+				<div style="background-color:#60B090; color:white;"><b>Main Menu</b></div>
+				HTML<br />
+				PHP<br />
+				PERL...
+				<div style="background-color:#60B0B0;color:white;"><b>Tim nhieu nhat</b></div>
+				HTML<br />
+				PHP<br />
+				PERL...
+				</div>
+				
+				
+			
+				
+				<div style = "background-color:#eee; height:1200px; width:950px; float:left;" >
+					<p>Technical and Managerial Tutorials</p>
+				</div>
+			<div style = "background-color:lightgrey; height:1200px; width:180px; float:right;">
+				<div style="background-color:#FE7800;color:white;"><b>Right Menu</b></div>
+				HTML<br />
+				PHP<br />
+				PERL...
+				<div style="background-color:#FE8800;color:white;"><b>Right Menu</b></div>
+				HTML<br />
+				PHP<br />
+				PERL...
+				<div style="background-color:#FE9800;color:white;"><b>Right Menu</b></div>
+				HTML<br />
+				PHP<br />
+				PERL...
+			</div>
+			<div style = "clear:both"> </div>
+		</section>
+		<section>
+		<a href="/">HOME</a>
+		</section>
+    </body>	
+</html>

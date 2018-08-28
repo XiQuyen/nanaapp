@@ -1,0 +1,92 @@
+<!-- howdy/templates/about.html -->
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Nana!</title>
+		<link rel="stylesheet" type="text/css" href='{% static "/css/foundation.css" %}'>	
+		<style>				
+			#header{
+				background-image: url('{% static "\pictures\117570.jpg" %}');
+			}
+			#top{
+				background-image: url('{% static "pictures/117577.jpg" %}');
+			}
+		</style>		
+    </head>
+    <body>
+		<div id="top">
+        <h1>About {{user}}</h1>
+		</div>
+		
+		<div id="textDiv"></div>  
+		<script type="text/javascript"> 
+			var list = {{ array1|safe }}
+			var link = {{ link|safe }}
+			var div = document.getElementById("textDiv");  
+			for (i = 0; i < list.length; i++) { 
+			    var a = document.createElement('a');
+				var linkText = document.createTextNode(list[i]);
+				if (i > 0) {
+					document.write("  |  ");		
+				}
+				a.appendChild(linkText);
+				a.title = list[i];
+				a.href = link[i];
+				document.body.appendChild(a);
+			}			
+			
+		</script>
+		
+		<div id="myName1">	
+		<script type="text/javascript"> 
+		var a = document.createElement('a');
+		a.setAttribute('href',link[0]);
+		a.innerHTML = list[0];
+		// apend the anchor to the body
+		// of course you can append it almost to any other dom element
+		document.getElementsByTagName('body')[0].appendChild(a);
+		</script>
+		
+		<div class="product">		
+		{% for i in n %}			
+			<p style="color:#FF0000";> 	{{ forloop.counter0 }}. {{text}} </p>
+			<a href="https://developer.mozilla.org/en-US/" target="_blank"> 123 </a>
+		{% endfor %}
+		</div>
+		
+			
+		{% for i in n %}			
+			<p style="color:#FF0000";> 	{{ forloop.counter0 }}. {{text}} </p>
+			<div class="product">	
+			<a href="https://developer.mozilla.org/en-US/" target="_blank"> 567 </a>
+			</div>
+		{% endfor %}
+		
+		
+		<p> let start a <a href="/post/new">new post</a> </p>
+		<div id="textMenu"></div>  
+		<script type="text/javascript"> 
+			var list2 = {{ array2|safe }}
+			var link2 = {{ link2|safe }}
+			var div = document.getElementById("textMenu");  
+			for (i = 0; i < list.length; i++) { 
+				var a = document.createElement('a');
+				var linkText = document.createTextNode(list2[i]);
+				if (i > 0) {
+					document.write("  |  ");		
+				}
+				a.appendChild(linkText);
+				a.title = list2[i];
+				a.href = link2[i];
+				document.body.appendChild(a);		
+			}		 
+		</script>		
+		<script> window.alert("Here is my message"); </script>	
+		<script> window.alert(document.title); </script>	
+		<div id="bottom">
+		<a href="/">Go back home</a>
+		</div>
+    </body>
+</html>

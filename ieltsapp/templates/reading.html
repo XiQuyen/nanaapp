@@ -1,0 +1,146 @@
+<!-- ieltsapp/templates/about.html -->
+
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Reading with Nana!</title>
+		<script src="https://www.w3schools.com/lib/w3.js"></script>		
+		<link rel="stylesheet" type="text/css" href='{% static "/css/foundation.css" %}'>	
+		<link rel="stylesheet" type="text/css" href='{% static "/css/menu.css" %}'>		
+		<style>
+		#top{
+	background-image: url('{% static "pictures/117578.jpg" %}');
+
+		}
+		</style>
+    </head>
+	
+    <body>	
+
+		<div id="top" align="center">
+			<h1>Nana the world of IELTS!</h1>
+		</div>
+		<div class="horitical-menu">
+		<ul class="horizontal">
+		  <li><a href="/">Home</a></li>
+		  <li><a href="/listening">Listening</a></li>
+		  <li><a href="/speaking">Speaking</a></li>
+		  <li><a href="/reading" class="active">Reading</a></li>
+		  <li><a href="/writing">Writing</a></li>
+		  </ul>
+		</div>
+
+		
+	    <div w3-include-html="menu.html"></div>
+        <h1 class="tittle">Reading</h1>
+		<li><a href="/">Go back home</a>  |
+		<li><a href="/writing">Writing</a>  |
+		<li><a href="/speaking">Speaking</a>  |
+		<li><a href="/about">About Nana</a>
+		
+		
+		<h2 style="background-color:powderblue;">2018/01/27</h2>
+		<h3 style="color:#90EE90";>Paragraph</h3>
+		{% for v in list %}
+		<li> {{v}}
+		{% endfor %}			
+		<table>
+			<tr>
+				<td>a</td>
+				<td>b</td>
+				<td>c</td>
+			</tr>
+
+			{% for key, values in data.items %}
+			<tr>
+				<td>{{key}}</td>
+				{% for v in values %}
+				<td>{{v}}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+
+		
+		<h3 style="color:#20B2AA";>Paragraph</h3>
+		<li>It is <i> A </i>
+		<li>They are <i> B </i>
+		<li>Be sure <i> C </i>
+		<h3 style="color:#B0C4DE";>Paragraph</h3>
+		 <div>Hello</div>
+		<div>World</div>
+		<h2 style="background-color:powderblue;">2018/01/26</h2>
+		<form action="/post/200/" method="get">
+		  Title:<br> <input type="text" name="title" value="Harry Porter" ><br>		
+		  Message:<br> <input type="text" name="text" value="Never give up" rows=10><br>	
+		  Date:<br><input type="text" name="published_date" value="20170801"><br>		    
+		  <input type="submit" value="Post Details">
+		</form>
+		
+		<h2 style="background-color:powderblue;">2018/01/25</h2>
+		<form action="/user/haha/" method="get">
+		  Message:<br> <input type="text" name="message" value="Hi!"><br>		 
+		  <input type="submit" value="Send">
+		</form>
+		<form action="/user/hihi/" method="get">
+		  Message:<br>
+		  <input type="text" name="message" value="Hi!"><br>		 
+		  <input type="submit" value="Send">
+		</form>
+		<form action="/user/hoho/" method="get">
+		  Message:<br> <input type="text" name="message" value="Hi!"><br>		 
+		  <input type="submit" value="Send">
+		</form>
+		<h2 style="background-color:powderblue;">2018/01/24</h2>
+		<li>Select.
+		<form>
+		  <input type="radio" name="gender" value="male" checked> Male<br>
+		  <input type="radio" name="gender" value="female"> Female<br>
+		  <input type="radio" name="gender" value="other"> Other
+		</form>
+		
+		<h2 style="background-color:powderblue;">2018/01/23</h2>
+		<form action="/post/new/" method="post">
+		  Name:<br>
+		  <input type="text" name="firstname" value="Mickey"><br>
+		  Email or phone:<br>
+		  <input type="text" name="lastname" value="Mouse"><br><br>
+		  <input type="submit" value="Register">
+		</form>
+		
+		<h2 style="background-color:powderblue;">2018/01/22</h2>
+		<form action="/post" method="get">
+		  First name:<br>
+		  <input type="text" name="firstname" value="Mickey"><br>
+		  Last name:<br>
+		  <input type="text" name="lastname" value="Mouse"><br><br>
+		  <input type="submit" value="Submit">
+		</form>
+
+		<h2 style="background-color:powderblue;">2018/01/21</h2>
+		<li>I'm going to Lam's wedding today.
+		
+		<form action="/your-name/" method="post">
+			<label for="your_name">Your name: </label>
+			<input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+			<input type="submit" value="OK">
+		</form>
+		
+		
+		<h2 style="background-color:powderblue;">2018/01/20</h2>
+		<p style="color:#FF0000"; text-align:justify>
+			<li>Reading is a skill that I think I need to spend more time to practice. 
+			<li>I want to write my own website with some simple information that I want to provide to my friends and customer to encourage them to invest a good chance for Vietnam economy.
+		</p>	
+	
+		<h2 style="background-color:powderblue;">2018/01/19</h2>
+		<p style="color:#FF0000";>
+			<li>Reading something is a skill that we need all the time. 
+			<li>I found that reading is not good for me. So I plan to write a website to install my information about how I can have a good connect from the text to my mind. There would be a link.
+		</p>
+	
+    <a href="/">Go back home</a>
+    </body>
+</html>
